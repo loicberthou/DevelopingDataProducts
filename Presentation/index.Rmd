@@ -11,14 +11,52 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
+## Introduction
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+- This Shiny application is inspired by the final project of the Regression Modeling class.
+- The data is taken from the **mtcars** dataset in the package **datasets**.
+- The objective is to demonstrate the choice of model for the MPG.
 
---- .class #id 
+## The models
 
-## Slide 2
+### Model 1: lm(mpg ~ wt + factor(am), data=mtcars)
+Selecting the two most influential factors.
 
-Test Slide 2
+### Model 2: lm(mpg ~ wt * factor(am), data=mtcars)
+Selecting the two most influential factors with their concurrent interraction.
+
+### Model 3: lm(mpg ~ wt * factor(am) + qsec, data=mtcars)
+Adding the qsec factor.
+
+---
+
+## Model 1
+
+```{r, echo=FALSE}
+fit <- lm(mpg ~ wt + factor(am), data=mtcars)
+par(mfrow=c(2,2))
+plot(fit)
+par(mfrow=c(1,1))
+```
+
+---
+
+## Model 2
+
+```{r, echo=FALSE}
+fit <- lm(mpg ~ wt * factor(am), data=mtcars)
+par(mfrow=c(2,2))
+plot(fit)
+par(mfrow=c(1,1))
+```
+
+---
+
+## Model 3
+
+```{r, echo=FALSE}
+fit <- lm(mpg ~ wt * factor(am) + qsec, data=mtcars)
+par(mfrow=c(2,2))
+plot(fit)
+par(mfrow=c(1,1))
+```

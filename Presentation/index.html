@@ -42,25 +42,61 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <ul>
+<li>This Shiny application is inspired by the final project of the Regression Modeling class.</li>
+<li>The data is taken from the <strong>mtcars</strong> dataset in the package <strong>datasets</strong>.</li>
+<li>The objective is to demonstrate the choice of model for the MPG.</li>
+</ul>
+
+<h2>The models</h2>
+
+<h3>Model 1: lm(mpg ~ wt + factor(am), data=mtcars)</h3>
+
+<p>Selecting the two most influential factors.</p>
+
+<h3>Model 2: lm(mpg ~ wt * factor(am), data=mtcars)</h3>
+
+<p>Selecting the two most influential factors with their concurrent interraction.</p>
+
+<h3>Model 3: lm(mpg ~ wt * factor(am) + qsec, data=mtcars)</h3>
+
+<p>Adding the qsec factor.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Model 1</h2>
   </hgroup>
   <article data-timings="">
-    <p>Test Slide 2</p>
+    <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Model 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Model 3</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -72,14 +108,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Introduction'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Model 1'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Model 2'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Model 3'>
+         4
       </a>
     </li>
   </ul>
